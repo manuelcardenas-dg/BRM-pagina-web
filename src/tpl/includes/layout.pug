@@ -1,0 +1,68 @@
+include mixins
+doctype
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		//- Desactivar en dispositivos móviles la detección automática de números de teléfono, emails, direcciones y fechas.
+		meta(name="format-detection", content="telephone=no, email=no, address=no, date=no")
+		
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		
+		block title
+			title Manuel Cárdenas - Diseñador Gráfico
+		
+		//- Posicionamiento
+		meta(name='title', content='Manuel Cárdenas - Diseñador Gráfico')
+		meta(name='description', content='Diseñador gráfico con experiencia en realizar funciones de diseño de imagen corporativas, análisis, planeación y presentación de proyectos, estudio de mercado, elaboración y edición de fotografías y vídeos, diseño y desarrollo de plataformas web y área editorial, organización de eventos empresariales y manejo de programas de diseño. Con    capacidad de análisis, adaptabilidad, planificación y mejoramiento continuo.')
+		meta(name='author', content='Manuel Cárdenas - Diseñador Gráfico')
+		meta(name='keywords', content='diseño, gráfico, creativo, manuel, cardenas, publicidad, identidad, logo, diseño web, redes sociales, social media')
+		
+		//- Icono Cabecera
+		link(rel="shortcut icon", href="/assets/images/favicon.png", type="image/png")
+		//- link(rel='icon' type='image/x-icon' href='/assets/img/favicon.ico')
+		
+		//- Estilos globales
+		link(rel="stylesheet", href="/assets/css/global.css",  data-turbolinks-track="reload")
+		
+		//- Turbolinks
+		script(src="/assets/js/turbolinks.js")
+		
+	body.c-block-body
+		
+		header.c-header
+			.g-container.c-header__container
+				//- Cuando se especifica el atributo data-turbolinks-permanent el elemento
+					queda fijo y no se rendiza en cada carga de la página. Es obligatorio
+					agregar un ID al elemento.
+				a#logo-nigma.c-header__logo(href="/", data-turbolinks-permanent)
+					img(src="/assets/images/logo-manuel-cardenas.png", alt="Logo Nigma")
+				
+				.c-header__nav
+					include global-menu
+			
+		
+		
+		block container
+		br
+			
+		
+		//- Al definir el valor de data-turbolinks en false, no se carga la
+			página con ajax, es decir se carga la página por completo.
+		footer.g-container.c-block-3
+			a(href="/", data-turbolinks="false") Grupo Nigma
+		
+		
+		// popUps 
+		.o-is-hidden
+			include global-popups
+		// Fin - popUps 
+		
+			
+		// Vendors 
+		script(src="/assets/js/vendor.js", defer, data-turbolinks-eval="false", data-turbolinks-track="reload")
+
+		// Scripts globales 
+		script(src="/assets/js/global.js", defer, data-turbolinks-eval="false", data-turbolinks-track="reload")
+
+		block js_footer

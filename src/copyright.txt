@@ -1,0 +1,15 @@
+/**
+ *
+ * @author      <%= pkg.author.name %> <<%= pkg.author.email %>>
+ * @website     <%= pkg.author.url %>
+ * @copyright   <%= year %> <%= pkg.author.name %>
+ *
+ * @frontend-framework
+ * Name        : Manuel Cárdenas
+ * Description : <%= pkg.description %> ♥
+ * Version     : <%= pkg.version %>
+ * Author      : Manuel Cárdenas <manuelcardenas.dg@gmail.com.co>
+ * Website     : http://www.manuelcardenas.com.co
+ * License     : MIT
+ *
+ */

@@ -1,0 +1,45 @@
+//- 
+	Este archivo contiene los popups que se usan en todo el sitio,
+	como por ejemplo el popup para el login y registro.
+
+// Newsletter
+#newsletter.c-popup--small-1.mfp-with-anim
+	.c-popup__header Recibe nuestras ofertas y novedades
+	.c-popup__container
+		form#form-newsletter(autocomplete="off")
+			.c-form-newsletter__campo
+				input.o-form-field(type="text", name="newsletter__nombre", placeholder="Nombre", autocomplete="nope")
+			.c-form-newsletter__campo
+				input.o-form-field(type="text", name="newsletter__email", placeholder="Correo electrónico", autocomplete="nope")
+			.c-form-newsletter__campo
+				input.o-form-field(type="text", name="newsletter__telefono", placeholder="Celular", autocomplete="nope")
+			.c-form-newsletter__campo
+				select.js-select.js-select-departamento(name="newsletter__departamento", placeholder="Departamento", autocomplete="nope")
+					option(value="") Departamento
+					option(value="CUN") Cundinamarca
+					option(value="SAN") Santander
+					option(value="MED") Medellin
+					option(value="CAR") Cartagena
+					option(value="CALI") Cali
+					option(value="GUA") Guajira
+			.c-form-newsletter__campo
+				.o-form-check
+					input#check-politica.o-form-check__campo(type="checkbox", name="newsletter__politica")
+					label(for="check-politica")
+					span
+						a.o-form-link(href="#.") Aceptar política de protección de datos personales
+			.c-form-newsletter__campo
+				.c-notificacion--ok-nota.is-hidden.js-notificacion-newsletter
+					.c-notificacion__estado
+						span.icon-checkmark
+						.mensaje 
+							p Gracias, te hemos enviado un correo electrónico para que confirmes tu suscripción.
+					.c-notificacion__nota Nota: Si el correo no llega en los próximos segundos verifica tu bandeja de spam, si usas Gmail revisa la pestaña de promociones o notificaciones.
+			.c-form-newsletter__campo--btn
+				button.o-btn.icon-der.js-btn-newsletter Suscribirme #[i.icon-circle-right4]
+
+	button.o-btn-cerrar.js-close-popup
+		i.icon-cross2
+		span Cerrar
+	
+// /Newsletter 
