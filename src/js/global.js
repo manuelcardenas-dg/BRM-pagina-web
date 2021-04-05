@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
 
-	// Hyphenator.run();
+	Hyphenator.run();
 
 	//=require includes/turbolinks.js
 

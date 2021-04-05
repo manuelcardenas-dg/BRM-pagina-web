@@ -2,137 +2,28 @@
 	$SLIDERS.js
 *----------------------------------------------------------------------------*/
 
-
-/* ^Slider Home
------------------------------------------------------------------------------*/
-
-	$('.js-slider-home').slick({
-		infinite: true,
-		dots: false,
-		// fade: true,
-		touchMove: false,
-		draggable: false,
-		accessibility: false,
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		arrows: false,
-		// adaptiveHeight: true,
-		easing: 'easeInOutQuart',
-		prevArrow: '<div class="slick-prev  slick-arrow  icon-arrow-left3"></div>',
-		nextArrow: '<div class="slick-next  slick-arrow  icon-arrow-right3"></div>',
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					easing: 'easeOutCubic',
-				}
-			},
-		]
+		fade: true,
+		asNavFor: '.slider-nav'
 	});
 
-
-	$('.js-slider-home-text').slick({
-		infinite: true,
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
 		dots: true,
-		// fade: true,
-		touchMove: false,
-		draggable: false,
-		accessibility: false,
-		adaptiveHeight: true,
-		asNavFor: '.js-slider-home',
-		easing: 'easeInOutQuart',
-		prevArrow: '<div class="slick-prev  slick-arrow  icon-arrow-left2"></div>',
-		nextArrow: '<div class="slick-next  slick-arrow  icon-arrow-right2"></div>',
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					easing: 'easeOutCubic',
-				}
-			},
-		]
+		focusOnSelect: true
 	});
 
-/* ^Fin - Slider Home
------------------------------------------------------------------------------*/
-
-
-
-
-
-
-/* ^Slider recetas
------------------------------------------------------------------------------*/
-
-	$('.js-slider-recetas').slick({
-		infinite: true,
-		dots: false,
-		// fade: true,
-		arrows: true,
-		// adaptiveHeight: true,
-		asNavFor: '.js-slider-recetas-text',
-		easing: 'easeInOutQuart',
-		prevArrow: '<div class="slick-prev  slick-arrow  icon-circle-left2"></div>',
-		nextArrow: '<div class="slick-next  slick-arrow  icon-circle-right2"></div>',
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					easing: 'easeOutCubic',
-				}
-			},
-		]
+	$('a[data-slide]').click(function(e) {
+		e.preventDefault();
+		var slideno = $(this).data('slide');
+		$('.slider-nav').slick('slickGoTo', slideno - 1);
 	});
 
-
-	$('.js-slider-recetas-text').slick({
-		infinite: true,
-		dots: false,
-		arrows: false,
-		// fade: true,
-		touchMove: false,
-		draggable: false,
-		accessibility: false,
-		adaptiveHeight: true,
-		easing: 'easeInOutQuart',
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					easing: 'easeOutCubic',
-				}
-			},
-		]
-	});
-
-/* ^Fin - Slider recetas
------------------------------------------------------------------------------*/
-
-
-
-
-
-/* ^Slider Producto
------------------------------------------------------------------------------*/
-
-	$('.js-slider-producto').slick({
-		infinite: true,
-		dots: false,
-		// fade: true,
-		arrows: true,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		// adaptiveHeight: true,
-		easing: 'easeInOutQuart',
-		prevArrow: '<div class="slick-prev  slick-arrow  icon-circle-left2"></div>',
-		nextArrow: '<div class="slick-next  slick-arrow  icon-circle-right2"></div>',
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					easing: 'easeOutCubic',
-				}
-			},
-		]
-	});
 
 /* ^Fin - Slider Producto
 -----------------------------------------------------------------------------*/

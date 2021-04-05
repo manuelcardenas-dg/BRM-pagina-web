@@ -7,27 +7,44 @@
 -----------------------------------------------------------------------------*/
 
 .c-block-body
-	background: #ebeff2
+	background: #292828
+
+.c-block-body-2
+	width: 100%
+	height: 100vh
+	background-attachment: fixed
+	background-image: url(../images/fondo-home.png)
+	background-repeat: no-repeat
+	background-size: cover
 
 /* ^Fin - .c-block-body
 -----------------------------------------------------------------------------*/
 
-
+.c-global
+	width:100%
+	display: grid
+	grid-gap: 20px
+	grid-template-columns:repeat(6, 1fr)
+	grid-template-row:repeat(1, 1fr)
 
 /* ^.c-block-1
 -----------------------------------------------------------------------------*/
 
 .c-block-1
-	margin-bottom: 40px
+	grid-column: 2/7
+	// margin-top: 8rem;
+	display: flex
+	align-items: center
+	justify-content: center
 
-
-.c-block-1__heading
-	margin-bottom: 20px
-	
-
-.c-block-1__intro
-	text-align: center
-
+	.fas.fa-tools
+		color: $base3-color
+		margin: 40px
+		font-size: 5rem
+	.c-block-1__construction
+		color: $base-color
+		font-family: 'Quantico', sans-serif
+		font-size: 5rem
 /* ^Fin - .c-block-1
 -----------------------------------------------------------------------------*/
 
@@ -39,26 +56,110 @@
 -----------------------------------------------------------------------------*/
 
 .c-block-2
-	margin-bottom: 50px
-	border: 1px dashed $base2-color
-	background: #fff
+	grid-column: span 2
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	flex-direction: column
+	text-align: left
+	// margin-left: 3rem
 
 
 .c-block-2__item
 	padding: 30px 10px
 	margin: 5px 0
-	background: $base-color
-	font-size: 1.4rem
 	color: #fff
-	text-align: center
 
 	+min('m')
 		padding: 70px 10px
 
-
 .c-block-2__item--v2
 	@extends .c-block-2__item
 	background: $base2-color
+
+/* formulario*/
+	.c-block-2
+		.c-block-2__formulario
+			display: block
+			width:90%
+			.c-block-2__formulario-items
+				.formulario-items__form-group
+					.form-group__form-control
+						width:100%
+						margin: 10px 0px
+
+					.form-group__checkbox
+						margin: 30px 0px
+						font-family: 'IBM Plex Mono', monospace;
+						font-size: 1.2rem
+						&:hover a
+							color: $base4-color
+
+						[type="checkbox"]
+							display none
+
+						label
+							padding-left 3em
+							position relative
+							&:before
+								content ' '
+								border solid 1px #9e9e9e
+								border-radius 3px
+								width 2rem
+								height 2rem
+								position absolute
+								left 0px
+								top -0.4rem
+								transition all 0.2s
+								transform rotate(0deg)
+
+						[type="checkbox"]:checked
+							& + label
+								&:before
+									border-color $base4-color
+									color $base4-color
+									content '\f00c'
+									font-family FontAwesome
+									font-size:2rem
+									transform rotate(360deg)
+
+
+					.form-group__btn-send
+						padding:6px 70px
+						background: $base4-color
+						font-family: 'Quantico', sans-serif
+						font-size: 1.6rem
+						color: #173159
+						font-weight: bold
+						&:hover
+							color: $base-color
+							background: $base3-color
+
+					input,
+					textarea
+						padding: 10px
+						background: none
+						border: 1px solid #858585
+						font-family: 'IBM Plex Mono', monospace;
+
+					button
+						border: none
+
+				.formulario-items__form-group--v2
+					display: flex
+					.form-group__form-control
+						flex-direction: column
+						margin: 10px
+						width: 50%
+						&:first-child
+							margin-left:0px
+						&:last-child
+							margin-right:0px
+					input
+						padding: 10px
+						background: none
+						border: 1px solid #858585
+						font-family: 'IBM Plex Mono', monospace;
 
 
 
@@ -73,9 +174,76 @@
 -----------------------------------------------------------------------------*/
 
 .c-block-3
-	padding: 40px
-	border-top: 1px solid #b9c1c1
-	text-align: center
+	grid-column: 2/5
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	flex-direction: column
+	text-align: left
+	margin-left: 3rem
+	// margin-top: 8rem;
+
+.c-block-3__heading
+	color:$base-color
+	font-family: 'Quantico', sans-serif
+	font-size: 6.5rem
+	font-weight: 400
+
+.c-block-3__information
+	width: 60%
+	color:$base-color
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.6rem
+	margin: 40px 0 90px 0
+
+
+.c-block-3__btn__1
+	background: $base4-color
+	color: #000
+	margin-right: 10px
+	&:hover
+		background: $base3-color
+		color: $base-color
+.c-block-3__btn__2
+	background: none
+	border: solid 2px $base4-color
+	color: $base-color
+	margin-left: 10px
+	&:hover
+		border: solid 2px $base3-color
+		color: $base-color
+
+.c-block-3__btn__1,
+.c-block-3__btn__2
+	font-family: 'Quantico', sans-serif
+	padding: 6px 60px
+	font-weight: bold
+
+.fa-linkedin-in,
+.fa-whatsapp,
+.fa-at,
+.fa-map-marker-alt
+	&:before
+		color: $base4-color
+		margin-right: 5px
+
+.c-block-3__btn__info-contact
+	display: inline-block
+	color $base-color
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1.2rem
+	padding:20px 2px
+	width: 220px
+	// height: 60px
+	&:hover
+		color: $base4-color
+
+// .c-block-3__btn
+// 	.fas,
+// 	.fab
+// 		font-family: 'IBM Plex Mono', monospace;
+// 		font-weight: normal
+
 
 /* ^Fin - .c-block-3
 -----------------------------------------------------------------------------*/
@@ -88,22 +256,21 @@
 -----------------------------------------------------------------------------*/
 
 .c-block-4
-	@extend .c-block-2
-
-
-.c-block-4__box
-	grid()
-
-
-.c-block-4__item
-	@extends .c-block-2__item
-	col(6)
-
-	+min('m')
-		col(2)
-
-	+min('xl')
-		col(1)
+	grid-column: span 1
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	flex-direction: column
+	text-align: left
+	// margin-top: 8rem;
+	.c-block-4__img
+		left:-100px
+	.c-block-4__information
+		margin-right: 30px
+		margin-top: 20px
+		color: $base-color
+		font-family: 'IBM Plex Mono', monospace;
+		font-size: 1.2rem
 
 /* ^Fin - .c-block-4
 -----------------------------------------------------------------------------*/
@@ -112,31 +279,259 @@
 
 
 
-/* ^.c-block-5
+/* ^INICIO - .c-WE MAKE
+-----------------------------------------------------------------------------*/
+img-productos()
+	background-size: 100% auto
+	height: 100%
+	background-size: cover
+	background-repeat: no-repeat
+
+.c-block-text-center
+	display: flex
+	top: 100px
+	height: 90vh
+	right: -50px
+	position:fixed
+	justify-content: center
+	align-items: center
+	p
+		color: rgba($base-color, 0.04)
+		font-family: 'Quantico', sans-serif
+		font-size: 16rem
+		font-weight: 400
+
+.c-block-we-make
+	grid-column: span 2
+	margin-top: 200px
+	margin-left: 3rem
+	.c-block-we-make__heading
+		color:$base-color
+		font-family: 'Quantico', sans-serif
+		font-size: 6.5rem
+		font-weight: 400
+	.c-block-we-make__information
+		color:$base-color
+		font-family: 'IBM Plex Mono', monospace;
+		font-size: 1.6rem
+		margin: 40px 0 90px 0
+	li
+		list-style: none
+		width: 100%
+		height: 300px
+		position: relative
+		overflow: hidden
+		margin: 140px 0
+		a
+			h3
+				font-size: 18px
+				display none
+		&:first-child
+			margin-top: 0px
+		&:hover .customers__caja-texto
+			left: 0
+		&:hover
+			// Aplica el efecto en el boton
+			a
+				.btn__info-1
+					top: 76%
+					left: 0%
+					transform: translateX(-100%) translateY(-24%)
+				h3
+					top 76%
+					left 40%
+					transform translateX(-60%) translateY(-24%)
+					font-size: 24px
+					text-align: left
+					width: 60%
+					display: block
+
+		.customers__btn
+			display: block
+			text-decoration: none
+			cursor: pointer
+			transition: all .8s
+			h3
+				position: absolute
+				top 76%
+				left 40%
+				transform translateX(-60%) translateY(-24%)
+				font-size: 24px
+				font-family: 'Quantico', sans-serif
+				color: $base-color
+				text-shadow 2px 2px 2px rgba(0,0,0,.4)
+				transition: all .5s
+				text-align: left
+				width: 60%
+				display: block
+				hr
+					height: 4px
+					margin-top:2px
+					margin-bottom: 10px
+					background-color: $base-color
+					border: none
+				p
+					font-family: 'IBM Plex Mono', monospace;
+					font-weight: normal
+					font-size: 20px
+
+			&.hunt
+				background: url(../images/the-hunt-banner.png) no-repeat center
+				img-productos()
+			&.gatorade
+				background: url(../images/gatorade-banner.png) no-repeat center
+				img-productos()
+			&.classic
+				background: url(../images/classic-banner.png) no-repeat center
+				img-productos()
+			&.havoline
+				background: url(../images/havoline-banner.png) no-repeat center
+				img-productos()
+
+		.customers__caja-texto
+			position: absolute
+			top: 0%
+			left: -100%
+			width: 100%
+			height: 100%
+			background: rgba(#000, 0.6)
+			transition: all .5s
+			cursor: pointer
+			h3
+				position: absolute
+				// top: 50%
+				// left: 50%
+				// transform: translateX(-50%) translateY(-50%)
+				font-family: 'Quantico', sans-serif
+				font-size: 24px
+				color: $base-color
+				hr
+					height: 4px
+					margin-top:2px
+					margin-bottom: 10px
+					background-color: $base-color
+					border: none
+				p
+					font-family: 'IBM Plex Mono', monospace;
+					font-weight: normal
+					font-size: 20px
+
+/* ^FIN - .c-WE MAKE
 -----------------------------------------------------------------------------*/
 
-.c-block-5
-	@extends .c-block-2
 
 
-.c-block-5__box
-	+min('m')
-		grid()
-
-
-.c-block-5__item
-	@extends .c-block-2__item
-
-	+min('m')
-		col(1,6)
-
-	+min('xl')
-		col(1,12)
-
-/* ^Fin - .c-block-5
+/* ^INICIO - .c-block-portafolio
 -----------------------------------------------------------------------------*/
+.c-block-portafolio
+	grid-column: 2/7
+	margin-top: 7rem
+	.c-block-portafolio__encabezado
+		height: 482px
+		width: auto
+		background: $base-color
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		.c-encabezado__btn
+			position: fixed
+			top: 7rem
+			right: 0
+			a
+				color: #000
+				background: $base4-color
+				padding: 20px
+				margin: 4px
+				display: block
+				&:hover
+					color: $base-color
+					background: $base3-color
+				&:first-child
+					margin-top: 0
+					margin-right: 0
+				&:last-child
+					margin-bottom: 0
+					margin-right: 0
 
+		.c-encabezado__banner.banner-hunt
+			background: url(../images/banner-the-hunt.png) no-repeat center
+			background-size: 100% auto
+			height: 268px
+			width: 70%
+			background-size: cover
+			background-repeat: no-repeat
+		.c-encabezado__info
+			width: 70%
+			.c-info__1
+				color:$base4-color
+				font-size: 1.6rem
+			h1
+				font-family: 'Quantico', sans-serif
+				color: $base2-color
+				font-size: 7rem
+			.c-info__2
+				font-family: 'roboto', monospace;
+				color: $base2-color
+				font-size: 1.6rem
 
+	.c-block-portafolio__content
+		width: 90%
+		margin-top: 100px
+		margin-left:30px
+		display: flex
+		.c-content__info
+			width: 44%
+			height: 100px
+			margin: 20px
+			.fa-arrow-left
+				color: $base4-color
+				font-size: 2rem
+				&:hover
+					color: $base-color
+			p
+				margin: 30px 0 80px 0
+				font-family: 'IBM Plex Mono', monospace;
+				color: $base-color
+				font-size: 1.4rem
+				font-weight: lighter
+				letter-spacing: 1px
+				word-spacing: 0.2em
+
+		.c-content__slide
+			width: 56%
+			.main
+				font-family Arial
+				width 500px
+				display block
+				margin 0 auto
+
+			h3
+				background #fff
+				color #3498db
+				font-size 36px
+				line-height 100px
+				margin 10px
+				padding 2%
+				position relative
+				text-align center
+
+			.action
+				display block
+				margin 100px auto
+				width 100%
+				text-align center
+				a
+					display inline-block
+					padding 5px 10px
+					background #f30
+					color #fff
+					text-decoration none
+					&:hover
+						background #000
+
+/* ^FIN - .c-block-portafolio
+-----------------------------------------------------------------------------*/
 
 
 

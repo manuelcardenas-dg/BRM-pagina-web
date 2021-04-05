@@ -10,7 +10,7 @@
 /* THANKS */
 
 	Front-end Framework : Manuel Cárdenas
-	Description         : Código pre-horneado listo para mezclar, probar y disfrutar!
+	Description         : Prueba de ingreso BRM
 	Website             : http://www.manuelcardenas.com.co
 	Contact             : Manuel Cárdenas [at] manuelcardenas.com.co
 	From                : Bucaramanga, Colombia

@@ -3,19 +3,20 @@
 *----------------------------------------------------------------------------*/
 
 
-/* ^c-nav-1
+/* ^c-nav-1 - MENU PRINCIPAL
 -----------------------------------------------------------------------------*/
 
 // ul
 .c-nav-1
 	display: flex
-	flex-wrap: wrap
+	// flex-wrap: wrap
 
 	+max('xl')
 		justify-content: center
 
 	li
 		margin-left: 10px
+		width: 20%
 
 		+max('xl')
 			margin: 0 5px 5px 5px
@@ -26,22 +27,143 @@
 		a
 			display: block
 			padding: 8px 16px
-			border-radius: 50px
-			background: #f0f0f0
 			font-size: 1.5rem
-			color: $base2-color
+			color: $base-color
+			font-family: 'Quantico', sans-serif
+			text-align: center
+			// font-family: 'IBM Plex Mono', monospace;
 
 			+max('s')
 				text-align: center
 
+			&:after
+				content: '\00a0'
+				display: block
+				height: 2px
+				width: 40%
+				margin: 0 auto
+				position: relative
+				top: 4px
+				background: transparent
+				transition: top .3s ease-out
 
-
-			&:hover
-				background: darken(#f0f0f0, 6%)
+			&:hover:after
+				top: 8px;
+				background: $base3-color;
 
 			&.active
-				background: $base-color
-				color: #fff
+				&:after
+					height: 2px
+					background: $base3-color
+
+	.c-nav-1__btn
+		background: $base3-color
+
+		&:after
+			display: none
+
+		&:hover
+			background: $base-color;
+			color: $base3-color
+
+		&.active
+			background: $base-color;
+			color: $base3-color
 
 /* ^Fin - c-nav-1
+-----------------------------------------------------------------------------*/
+
+/* ^c-nav-2 - MENU LATERAL
+-----------------------------------------------------------------------------*/
+.c-nav-fixed
+	// position: fixed
+	margin-top: 8rem
+	grid-column: 1/2
+	height: 90vh
+	// width: 100%
+	// display: flex
+	// align-items: center
+	// justify-content: center
+	// flex-direction: column
+	// text-align: left
+	.c-nav-base
+		// display: block
+		// justify-content: center
+		// align-items: center
+		// flex-direction: column
+		// position:fixed
+		// position: relative
+		// width: 100%
+		// height: 88vh
+		// border-right: .1rem solid rgba($base-color, .2)
+		// border-right-width: 1em;
+		.c-nav-lateral
+			// margin-top: 8rem
+			padding: 0 3rem
+			position:fixed
+			border-right: .1rem solid rgba($base-color, .2)
+			height: 84%
+			overflow: hidden
+			// box-sizing: border-box
+			// position: absolute
+			// top: 50%
+			// left: 50%
+			// transform: translateX(-50%) translateY(-50%)
+			// width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			// flex-wrap: wrap
+			font-family: 'Quantico', sans-serif
+			text-align: center
+			// border-right: .1rem solid rgba($base-color, .2)
+			// display: flex
+			// flex-direction: column
+			.c-nav-lateral__title
+				font-size: 3.6rem
+				margin-bottom: 2rem
+				color: rgba($base-color, .2)
+				// align-items: center
+				// justify-content: center
+			.c-nav-lateral__ul
+				// padding: 8px 16px
+				font-size: 1.3rem
+				li
+					// display: flex
+					padding: 30px 0px
+					.fas
+						display: block
+						width 0px
+						&:before
+							font-size 4rem
+							display: none
+							float: left
+							width: 20%
+							margin: 0 auto
+							position: relative
+							top: -10px
+							left: -30px
+							background: transparent
+							transition: display .4s ease-out
+						&.active:before
+							// left:0px
+							display:block
+							color: $base4-color
+							transition: left .3s ease-out
+					.c-nav-lateral__btn
+						width:80%
+						padding:20px
+						font-size: 1.5rem
+						color: rgba($base-color, .5)
+						font-family: 'Quantico', sans-serif
+						align-items: center
+						justify-content: center
+						//
+						&:hover
+							color: $base4-color
+						//
+						&.active
+							color: $base4-color
+/* ^Fin - c-nav-2
 -----------------------------------------------------------------------------*/

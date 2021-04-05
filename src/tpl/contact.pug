@@ -1,0 +1,49 @@
+extends includes/layout
+
+block title
+	title CONTACT US
+	- var activePage = '/contact'
+
+block container
+	.c-block-3
+		h1.c-block-3__heading
+			| Let's do
+			br
+			| great things
+		p.c-block-3__information Ac molestie pulvinar nulla at. Sed non fermentum id nunc. Feugiat sit ipsum ullamcorper a. Mauris eget blandit enim enim morbi nam nec.
+		.c-block-3__btn
+			a.c-block-3__btn__info-contact(href="#") #[span.fab.fa-linkedin-in] tars.colombia 
+			a.c-block-3__btn__info-contact(href="#") #[span.fab.fa-whatsapp] 310 3101010
+		.c-block-3__btn
+			a.c-block-3__btn__info-contact(href="#") #[span.fas.fa-at] contacto@tars.com
+			a.c-block-3__btn__info-contact(href="#") #[span.fas.fa-map-marker-alt] Cra 53 # 128-35, Bogotá-CO.
+	.c-block-2
+		form.c-block-2__formulario(role='form' action='enviar.php' method='post' required)
+			.c-block-2__formulario-items
+				.formulario-items__form-group
+					input.form-group__form-control(type='text' placeholder='Name' name='name' required)
+					
+				.formulario-items__form-group
+					input.form-group__form-control(type='text' placeholder='Last Name' name='last name' required)
+						
+				.formulario-items__form-group--v2
+					input.form-group__form-control(type='text' placeholder='Mobile' name='mobile' required)
+					input.form-group__form-control(type='text' placeholder='Email' name='email' required)
+	
+				.formulario-items__form-group--v2
+					input.form-group__form-control(type='text' placeholder='City' name='city' required)
+					input.form-group__form-control(type='text' placeholder='Country' name='country' required)
+						
+				.formulario-items__form-group
+					textarea.form-group__form-control.area-largo(rows='3' placeholder='Message' name='message' required)
+					
+				.formulario-items__form-group
+					.form-group__checkbox
+						//-input(type='checkbox' name='terms' <='' input='')
+						input#activar(type='checkbox')
+						label(for='activar')
+							a(href='#')  I have read and agree to the privacy policies
+						
+				.formulario-items__form-group
+					button.form-group__btn-send
+						| SEND

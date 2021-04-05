@@ -1,5 +1,5 @@
-//=require vendor/jquery-1.8.0.min.js
-//=require vendor/jquery.easing.1.3.min.js
+=require vendor/jquery-1.8.0.min.js
+=require vendor/jquery.easing.1.3.min.js
 
 
 // Banner

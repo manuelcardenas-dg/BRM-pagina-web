@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'icomoon';
   src:  url('../../fonts/icons/icomoon/icomoon.eot?yb87a5');
   src:  url('../../fonts/icons/icomoon/icomoon.eot?yb87a5#iefix') format('embedded-opentype'),
@@ -7,7 +7,7 @@
     url('../../fonts/icons/icomoon/icomoon.svg?yb87a5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before,

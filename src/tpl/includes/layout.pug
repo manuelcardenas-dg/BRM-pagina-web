@@ -10,13 +10,13 @@ html(lang="es")
 		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 		
 		block title
-			title Manuel Cárdenas - Diseñador Gráfico
+			title TARS - TECNOLOGÍA APLICADA, RENDIMIENTO Y SERVICIO
 		
 		//- Posicionamiento
-		meta(name='title', content='Manuel Cárdenas - Diseñador Gráfico')
-		meta(name='description', content='Diseñador gráfico con experiencia en realizar funciones de diseño de imagen corporativas, análisis, planeación y presentación de proyectos, estudio de mercado, elaboración y edición de fotografías y vídeos, diseño y desarrollo de plataformas web y área editorial, organización de eventos empresariales y manejo de programas de diseño. Con    capacidad de análisis, adaptabilidad, planificación y mejoramiento continuo.')
+		meta(name='title', content='TARS - TECNOLOGÍA APLICADA, RENDIMIENTO Y SERVICIO')
+		meta(name='description', content='')
 		meta(name='author', content='Manuel Cárdenas - Diseñador Gráfico')
-		meta(name='keywords', content='diseño, gráfico, creativo, manuel, cardenas, publicidad, identidad, logo, diseño web, redes sociales, social media')
+		meta(name='keywords', content='tecnología, digital, app, web, startups')
 		
 		//- Icono Cabecera
 		link(rel="shortcut icon", href="/assets/images/favicon.png", type="image/png")
@@ -24,32 +24,37 @@ html(lang="es")
 		
 		//- Estilos globales
 		link(rel="stylesheet", href="/assets/css/global.css",  data-turbolinks-track="reload")
+		link(rel="stylesheet", href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Aarrow_right",  data-turbolinks-track="reload")
 		
 		//- Turbolinks
 		script(src="/assets/js/turbolinks.js")
 		
+		//- Font Icono
+		script(src='https://kit.fontawesome.com/8cc53c0b29.js' crossorigin='anonymous')
 	body.c-block-body
 		
 		header.c-header
-			.g-container.c-header__container
+			.c-header__container
 				//- Cuando se especifica el atributo data-turbolinks-permanent el elemento
 					queda fijo y no se rendiza en cada carga de la página. Es obligatorio
 					agregar un ID al elemento.
-				a#logo-nigma.c-header__logo(href="/", data-turbolinks-permanent)
-					img(src="/assets/images/logo-manuel-cardenas.png", alt="Logo Nigma")
+				a#logo.c-header__logo(href="/", data-turbolinks-permanent)
+					img(src="/assets/images/logo-tars.png", alt="Logo TARS")
 				
 				.c-header__nav
 					include global-menu
 			
 		
-		
-		block container
-		br
+		.c-global
+			include menu-lateral
+			
+			block container
+			//-br
 			
 		
 		//- Al definir el valor de data-turbolinks en false, no se carga la
 			página con ajax, es decir se carga la página por completo.
-		footer.g-container.c-block-3
+		//- footer.g-container.c-block-3
 			a(href="/", data-turbolinks="false") Grupo Nigma
 		
 		

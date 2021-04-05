@@ -1,9 +1,23 @@
 extends includes/layout
 
-//- block title
-	 title Manuel Cárdenas - Diseñador Gráfico
+block title
+	title TARS - TECNOLOGÍA APLICADA, RENDIMIENTO Y SERVICIO
+	- var activePage = '/home'
 
 block container
-	.g-container.c-block-1
-		h1.o-heading-1.c-block-1__heading Nigma Framework
-		p.c-block-1__intro Código pre-horneado listo para mezclar, probar y disfrutar! ❤️
+	//-.c-block-content
+	.c-block-3
+		h1.c-block-3__heading
+			|We are
+			br
+			|Digital Revolution
+		p.c-block-3__information Ac molestie pulvinar nulla at. Sed non fermentum id nunc. Feugiat sit ipsum ullamcorper a. Mauris eget blandit enim enim morbi nam nec.
+		.c-block-3__btn
+			a.c-block-3__btn__1(href="/landing-page.html") CONTACT US
+			a.c-block-3__btn__2(href="#") VIEW PORTFOLIO
+	.c-block-4
+		img.c-block-4__img(src="/assets/images/circulo.png", alt="circulo")
+		p.c-block-4__information Ac molestie pulvinar nulla at. Sed non fermentum id nunc. 
+	.c-block-4
+		img.c-block-4__img(src="/assets/images/hexagono.png", alt="")
+		p.c-block-4__information Ac molestie pulvinar nulla at. Sed non fermentum id nunc. 
